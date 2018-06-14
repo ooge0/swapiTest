@@ -14,7 +14,7 @@ Feature: Get description of 1st hero of the Star Wars world
       | height    | 183   |
 
     And Hero has a homeworld
-      |homeworld| https://swapi.co/api/planets/10/  |
+      |homeworlds| https://swapi.co/api/planets/10/  |
 
     And Hero is navigated the starship that was created
       | created   | 2014-12-15T12:49:32.457000Z |
@@ -28,4 +28,5 @@ Feature: Get description of 1st hero of the Star Wars world
       | https://swapi.co/api/films/2/  |
       | https://swapi.co/api/films/5/  |
       | https://swapi.co/api/films/3/  |
-    And test2
+
+

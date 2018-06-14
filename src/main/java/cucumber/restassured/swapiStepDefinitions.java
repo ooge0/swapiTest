@@ -1,7 +1,5 @@
 package cucumber.restassured;
 
-import com.sun.xml.internal.xsom.impl.scd.Iterators;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -13,12 +11,13 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.util.List;
 import java.util.Map;
+
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.core.StringContains.containsString;
 
 public class swapiStepDefinitions {
+
 
     private Response response;
     private ValidatableResponse json;
@@ -69,7 +68,8 @@ public class swapiStepDefinitions {
     @And ("Hero has a homeworld")
     public void current_hero_has_homeworld (Map <String, String> responseFields) {
         for (Map.Entry<String, String> field : responseFields.entrySet()) {
-                json.body(field.getKey(), equalTo((field.getValue())));
+               // json.body(field.getKey(), equalTo((field.getValue())));
+            System.out.println("field.getKey: "+field.getKey() + ", field.getValue: "+field.getValue());
             }
         }
 
@@ -103,10 +103,6 @@ public class swapiStepDefinitions {
         }
 
     }
-    @And ("test2")
-            public void test22 (){
-     json.body("films[0]" , equalTo("https://swapi.co/api/films/2/"));
 
-    }
 
 }
