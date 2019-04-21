@@ -12,44 +12,33 @@ import static org.hamcrest.CoreMatchers.equalTo;
 
 public class SwapiGetRequest {
 
-        @BeforeClass
-        public void setup () {
-            RestAssured.baseURI = "https://swapi.co";
-            RestAssured.basePath = "/api/";
-        }
+    @BeforeClass
+    public void setup() {
+        RestAssured.baseURI = "https://swapi.co";
+        RestAssured.basePath = "/api/";
+    }
 
-        @Test(enabled=true , description = "GET name of the 22nd hero in the list")
-        public void getResponseHeroDescriptionByNumber () {
-            Response res  =
-                    given ()
-                            /*
-                    .param("name", "Luke Skywalker")
-                    .param ("height","172")
-                    .param("mass", "77")
-                    .param("hair_color", "blond")
-                            */
-                    .when()
-                    .get("/people/22");
+    @Test(enabled = true, description = "GET name of the 22nd hero in the list")
+    public void getResponseHeroDescriptionByNumber() {
+        Response res =
+                given()
+                        .when()
+                        .get("/people/22");
 
-            System.out.println(res.body().prettyPrint());
+        System.out.println(res.body().prettyPrint());
 
-        }
-    @Test(enabled=true , description = "check that name of the 22nd hero is Boba Fett")
-    public void statusCodeVerification () {
+    }
 
-        given ()
-                        /*
-                .param("name", "Luke Skywalker")
-                .param ("height","172")
-                .param("mass", "77")
-                .param("hair_color", "blond")
-                        */
+    @Test(enabled = true, description = "check that name of the 22nd hero is Boba Fett")
+    public void statusCodeVerification() {
+
+        given()
                 .when()
                 .get("/people/22")
                 .then()
-                .and ()
+                .and()
                 .body("name", equalTo("Boba Fett"))
-                .and ()
+                .and()
                 .body("gender", equalTo("male"))
                 .and()
                 .body("films [1]", equalTo("https://swapi.co/api/films/5/"))
@@ -57,7 +46,7 @@ public class SwapiGetRequest {
                 .body("url", equalTo("https://swapi.co/api/people/22/"))
                 .and()
                 .body("starships[0]", equalTo("https://swapi.co/api/starships/21/"))
-                        .contentType(ContentType.JSON);
+                .contentType(ContentType.JSON);
     }
- }
+}
 

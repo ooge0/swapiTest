@@ -1,0 +1,254 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "I check the parameters of 22nd hero",
+        "description": "",
+        "id": "get-description-of-1st-hero-of-the-star-wars-world;i-check-the-parameters-of-22nd-hero",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1483878195,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Current hero\u0027s",
+            "match": {
+              "location": "swapiStepDefinitions.current_hero_exist_and_has_number()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3922486377,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I get information about current hero",
+            "match": {
+              "location": "swapiStepDefinitions.i_get_information_about_curent_hero()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 96655380,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Current hero exists and the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 43
+                }
+              ],
+              "location": "swapiStepDefinitions.current_hero_exists_and_the_status_code_is_200(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1323747249,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I check name and hero\u0027s skin_color",
+            "match": {
+              "location": "swapiStepDefinitions.i_check_hero_skin_color(String,String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "name",
+                  "Boba Fett"
+                ],
+                "line": 9
+              },
+              {
+                "cells": [
+                  "skin_color",
+                  "fair"
+                ],
+                "line": 10
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 73568632,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I check that current hero has gender, eye_color and height",
+            "match": {
+              "location": "swapiStepDefinitions.current_hero_has_number_gender_height(String,String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "gender",
+                  "male"
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "eye_color",
+                  "brown"
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "height",
+                  "183"
+                ],
+                "line": 15
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 34292327,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Hero has a homeworld",
+            "match": {
+              "location": "swapiStepDefinitions.current_hero_has_homeworld(String,String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "homeworld",
+                  "https://swapi.co/api/planets/10/"
+                ],
+                "line": 18
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 17305149,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Hero is navigated the starship that was created",
+            "match": {
+              "location": "swapiStepDefinitions.Hero_check_the_starship(String,String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "created",
+                  "2014-12-15T12:49:32.457000Z"
+                ],
+                "line": 21
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 71032181,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "Hero has a film1",
+            "match": {
+              "location": "swapiStepDefinitions.current_hero_has_film1(String,String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "films[0]",
+                  "https://swapi.co/api/films/2/"
+                ],
+                "line": 24
+              },
+              {
+                "cells": [
+                  "films[1]",
+                  "https://swapi.co/api/films/5/"
+                ],
+                "line": 25
+              },
+              {
+                "cells": [
+                  "films[2]",
+                  "https://swapi.co/api/films/3/"
+                ],
+                "line": 26
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 77309599,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "Hero has a films",
+            "match": {
+              "location": "swapiStepDefinitions.Hero_has_a_films(String\u003e\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "https://swapi.co/api/films/2/"
+                ],
+                "line": 29
+              },
+              {
+                "cells": [
+                  "https://swapi.co/api/films/5/"
+                ],
+                "line": 30
+              },
+              {
+                "cells": [
+                  "https://swapi.co/api/films/3/"
+                ],
+                "line": 31
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 19468581,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "test2",
+            "match": {
+              "location": "swapiStepDefinitions.test22()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@test"
+          }
+        ]
+      }
+    ],
+    "name": "Get description of 1st hero of the Star Wars world",
+    "description": "",
+    "id": "get-description-of-1st-hero-of-the-star-wars-world",
+    "keyword": "Feature",
+    "uri": "people.feature"
+  }
+]

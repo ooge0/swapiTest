@@ -30,12 +30,11 @@ public class swapiStepDefinitions {
 
     {
         try {
-            URL_HERO_BY_NUMBER = Resources.getReplacer("URL_HERO_BY_NUMBER");
+            URL_HERO_BY_NUMBER = Resources.getTestParameter("URL_HERO_BY_NUMBER");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-//    private String ENDPOINT_HERO_DESCRIPTION_BY_NUMBER = "https://swapi.co/api/people/22";
 
     @Given("Current hero's")
     public void current_hero_exist_and_has_number()
@@ -46,8 +45,7 @@ public class swapiStepDefinitions {
     @When("I get information about current hero")
     public void i_get_information_about_curent_hero()  {
         response = request.when().get(URL_HERO_BY_NUMBER);
-        System.out.println("response: " + response.prettyPrint());
-
+        System.out.println(response.prettyPrint());
     }
 
     @Then("Current hero exists and the status code is (\\d+)")
@@ -117,7 +115,7 @@ public class swapiStepDefinitions {
 
     @And("test2")
     public void test22() throws IOException {
-        String REFERENCE_FILMS_URL = Resources.getReplacer("REFERENCE_FILMS_URL");
+        String REFERENCE_FILMS_URL = Resources.getTestParameter("REFERENCE_FILMS_URL");
         json.body("films[0]", equalTo(REFERENCE_FILMS_URL));
 
     }

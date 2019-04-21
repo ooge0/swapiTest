@@ -16,11 +16,12 @@ public class Resources {
     }
 
     public static String envPropertyFilePath() {
-        String envPropertyFilePath = "./src/main/Resources/env.properties";
+        String envPropertyFilePath = "./swapiTestProj-master/src/main/resources/env.properties";
         return envPropertyFilePath;
     }
+
     public static String replacerPropertyFilePath() {
-        String replacerPropertyFilePath = "./src/main/Resources/replacer.properties";
+        String replacerPropertyFilePath = "./swapiTestProj-master/src/main/resources/replacer.properties";
         return replacerPropertyFilePath;
     }
 
@@ -38,7 +39,8 @@ public class Resources {
         }
         return serviceURL;
     }
-    public static String getReplacer(String key) throws IOException {
+
+    public static String getTestParameter(String key) throws IOException {
         Properties prop = new Properties();
         FileInputStream fis = new FileInputStream(Resources.replacerPropertyFilePath ());
         prop.load(fis);
